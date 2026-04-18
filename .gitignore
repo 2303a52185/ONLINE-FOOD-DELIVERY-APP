@@ -1,0 +1,59 @@
+# Dependencies
+node_modules/
+**/node_modules/
+package-lock.json
+**/package-lock.json
+yarn.lock
+**/yarn.lock
+pnpm-lock.yaml
+**/pnpm-lock.yaml
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Build & Dist
+dist/
+**/dist/
+build/
+**/build/
+out/
+**/out/
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# IDEs
+.vscode/
+.idea/
+.sublime-project
+.sublime-workspace
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+**/cache/
+
+# Uploads (except keep Uploads folder)
+Backend/Uploads/*
+!Backend/Uploads/.gitkeep

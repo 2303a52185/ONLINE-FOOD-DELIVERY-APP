@@ -1,0 +1,21 @@
+{
+  "name": "food-del-workspace",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev:landing": "npm --prefix Landing run dev",
+    "dev:backend": "npm --prefix apps/api/server run dev",
+    "dev:frontend": "npm --prefix apps/web/customer run dev -- --host 0.0.0.0 --port 5173 --strictPort",
+    "dev:admin": "npm --prefix apps/web/admin run dev -- --host 0.0.0.0 --port 5174 --strictPort",
+    "dev:restaurant": "npm --prefix apps/web/restaurant run dev -- --host 0.0.0.0 --port 5175 --strictPort",
+    "dev:all": "concurrently -k --kill-others-on-fail -n landing,backend,frontend,admin,restaurant -c yellow,blue,green,magenta,cyan \"npm run dev:landing\" \"npm run dev:backend\" \"npm run dev:frontend\" \"npm run dev:admin\" \"npm run dev:restaurant\"",
+    "build:frontend": "npm --prefix apps/web/customer run build",
+    "build:admin": "npm --prefix apps/web/admin run build",
+    "build:restaurant": "npm --prefix apps/web/restaurant run build",
+    "build:all": "npm run build:frontend && npm run build:admin && npm run build:restaurant",
+    "start:server": "npm --prefix apps/api/server start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
