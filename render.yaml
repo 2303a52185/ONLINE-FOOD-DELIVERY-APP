@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: hungrybites-backend
+    runtime: node
+    rootDir: apps/api/server
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 4000
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: STRIPE_SECRET_KEY
+        sync: false
+      - key: STRIPE_PUBLISH_KEY
+        sync: false
+      - key: FRONTEND_URL
+        value: https://customer-gamma-six.vercel.app
+      - key: ADMIN_URL
+        value: https://admin-nine-lake-44.vercel.app
+      - key: RESTAURANT_URL
+        value: https://restaurant-olive-five.vercel.app
+      - key: CORS_ORIGIN
+        value: https://customer-gamma-six.vercel.app,https://admin-nine-lake-44.vercel.app,https://restaurant-olive-five.vercel.app
