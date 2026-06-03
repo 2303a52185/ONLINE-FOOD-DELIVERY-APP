@@ -167,5 +167,5 @@ To contribute:
 
 ## Author
 
-**Adina Isran**
+**Athiqa**
 
